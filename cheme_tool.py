@@ -307,4 +307,3 @@ elif menu == "🏆 Declare Winner":
         st.markdown(f"<div class='winner-banner'>👑 {winner} 👑</div>", unsafe_allow_html=True)
         st.markdown(f"<h2 style='text-align:center'>Score: {max_score}</h2>", unsafe_allow_html=True)
         st.balloons()
-        
