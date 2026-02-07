@@ -98,11 +98,10 @@ with st.sidebar:
         ["🏠 LOBBY", 
          "🏭 R1: Guess the Scale", 
          "🚨 R2: War Room", 
-         "⚡ R3: Lightning Fire", 
-         "❌ R4: Fact or Myth",
-         "💰 R5: The Auction",
-         "🌡️ R6: Heat Exchanger Hustle",
-         "🔔 R7: Ultimate Buzzer",
+         "❌ R3: Fact or Myth",
+         "💰 R4: The Auction",
+         "🌡️ R5: Heat Exchanger Hustle",
+         "🔔 R6: Ultimate Buzzer",
          "🏆 CHAMPION"])
 
 # --- 4. GAME CONTENT ---
@@ -183,30 +182,9 @@ elif menu == "🚨 R2: War Room":
             st.markdown("<div class='answer-box'>✅ B: CHECK SUCTION! (It's Cavitation)</div>", unsafe_allow_html=True)
             if st.button("Award +20"): add_points(active_team, 20)
 
-# === ROUND 3: RAPID FIRE ===
-elif menu == "⚡ R3: Lightning Fire":
-    st.header("⚡ Round 3: Rapid Fire")
-    st.info("📢 Host reads. Teams shout Yes/No. (+5 Points)")
-    
-    c1, c2 = st.columns(2)
-    with c1:
-        st.subheader("Set A")
-        if st.button("Reveal Q1"): st.write("Sound faster in water? **YES**")
-        if st.button("Reveal Q2"): st.write("Gold is metal? **YES**")
-        if st.button("Reveal Q3"): st.write("Water expands freezing? **YES**")
-        if st.button("Reveal Q4"): st.write("Pencil lead is Graphite? **YES**")
-        if st.button("Reveal Q5"): st.write("Air is pure element? **NO**")
-    with c2:
-        st.subheader("Set B")
-        if st.button("Reveal Q6"): st.write("pH pure water 7? **YES**")
-        if st.button("Reveal Q7"): st.write("Dry Ice is water? **NO**")
-        if st.button("Reveal Q8"): st.write("Mercury liquid room temp? **YES**")
-        if st.button("Reveal Q9"): st.write("Rotten egg is CO? **NO**")
-        if st.button("Reveal Q10"): st.write("Natural gas is Methane? **YES**")
-
-# === ROUND 4: FACT OR MYTH ===
-elif menu == "❌ R4: Fact or Myth":
-    st.header("❌ Round 4: Fact or Myth")
+# === ROUND 3: FACT OR MYTH ===
+elif menu == "❌ R3: Fact or Myth":
+    st.header("❌ Round 3: Fact or Myth")
     st.info("📢 Is it Error (False) or Eureka (True)? (+10 Points)")
     
     t_ee = st.selectbox("Winner:", list(st.session_state.teams.keys()))
@@ -239,9 +217,9 @@ elif menu == "❌ R4: Fact or Myth":
             st.markdown("<div class='answer-box'>❌ ERROR (False)! Hot air rises (Lighter).</div>", unsafe_allow_html=True)
             if st.button("Award +10"): add_points(t_ee, 10)
 
-# === ROUND 5: AUCTION ===
-elif menu == "💰 R5: The Auction":
-    st.header("💰 Round 5: Engineering Auction")
+# === ROUND 4: AUCTION ===
+elif menu == "💰 R4: The Auction":
+    st.header("💰 Round 4: Engineering Auction")
     st.info("📢 Pick the BEST solution. (+30 Points)")
     
     prob = st.radio("Problem:", ["P1: Bad Water", "P2: High Fuel Bill", "P3: Slow Reaction"], horizontal=True)
@@ -271,9 +249,9 @@ elif menu == "💰 R5: The Auction":
         if st.button("Reveal P3"):
             st.markdown("<div class='answer-box'>✅ C: Add Catalyst (Speeds up rate)</div>", unsafe_allow_html=True)
 
-# === ROUND 6: HEAT EXCHANGER HUSTLE ===
-elif menu == "🌡️ R6: Heat Exchanger Hustle":
-    st.header("🌡️ Round 6: Heat Exchanger Hustle")
+# === ROUND 5: HEAT EXCHANGER HUSTLE ===
+elif menu == "🌡️ R5: Heat Exchanger Hustle":
+    st.header("🌡️ Round 5: Heat Exchanger Hustle")
     st.info("📢 Thermal Design Challenge! (+20 Points)")
     
     t_hx = st.selectbox("Correct Team:", list(st.session_state.teams.keys()), key="hx_team")
@@ -311,9 +289,9 @@ elif menu == "🌡️ R6: Heat Exchanger Hustle":
             st.markdown("<div class='answer-box'>✅ C: Floating Head (Bundle removable + Straight tubes)</div>", unsafe_allow_html=True)
             if st.button("Award +20"): add_points(t_hx, 20)
 
-# === ROUND 7: ULTIMATE BUZZER ===
-elif menu == "🔔 R7: Ultimate Buzzer":
-    st.header("🔔 Round 7: Ultimate Buzzer")
+# === ROUND 6: ULTIMATE BUZZER ===
+elif menu == "🔔 R6: Ultimate Buzzer":
+    st.header("🔔 Round 6: Ultimate Buzzer")
     st.info("📢 Sudden Death! First to shout wins.")
     
     buzz_q = st.selectbox("Question:", [
