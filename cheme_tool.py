@@ -108,7 +108,7 @@ with st.sidebar:
 
 # === LOBBY ===
 if menu == "🏠 LOBBY":
-    st.markdown("<div class='big-header'>AZEO SPARK 2025</div>", unsafe_allow_html=True)
+    st.markdown("<div class='big-header'>AZEO SPARK 2026</div>", unsafe_allow_html=True)
     st.markdown("""
     <div style='text-align: center; font-size: 20px;'>
     <b>Welcome Engineers!</b><br>
