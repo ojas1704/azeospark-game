@@ -306,4 +306,3 @@ elif menu == "🔔 Tie-Breaker: Ultimate Buzzer":
 # --- FOOTER ---
 st.markdown("---")
 st.markdown("*Created for AzeoSpark 2025 | Dept of Chemical Engineering*")
-```
